@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply and call method</title>
+</head>
+<body>
+    <script>
+    const youtuber={
+        name:"name1",
+        age:"age1",
+        feature:function(){
+            console.log("i am first youtuber");
+        }
+    }
+    const youtuber1={
+        name2:"name2",
+        age2:"age2",
+        feature2:function(){
+            console.log("i am second youtuber");
+        }
+    }
+    const result=youtuber1.feature2.call(youtuber);
+    console.log(result);
+    
+    // how can we use apply method in another way 
+    // phlya argument this ka hota h so is ko null chor dain ya " " chor sakty h
+    const result1=Math.max.apply(null,[1,2,3,4,5]);
+    console.log(result1);
+    </script>
+</body>
+</html>
